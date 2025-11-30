@@ -37,7 +37,7 @@ This is the starting point. It shows implied volatility across:
 - **Z-axis**: Implied volatility
 
 What you're seeing is the famous "volatility smile". Out-of-the-money options have higher implied vol because of tail risk and skewness. The surface should be relatively smooth - if it's jagged, there's not enough liquidity in those contracts.
-If you would like a futher explination I would suggest watching this video:
+If you would like a futher explination I would suggest watching this video:  
 https://www.youtube.com/watch?v=G7gf-oXptxE  
 https://www.youtube.com/watch?v=YH0tWpBaKGs
 
@@ -144,6 +144,7 @@ Lots of people think it's overly theoretical and the assumptions don't hold in r
 **Critiques:**
 - Borovička, J., Hansen, L. P., & Scheinkman, J. A. (2016). "Misspecified Recovery." *Journal of Finance*, 71(6), 2493-2544.
   - (They argue the assumptions are too strong and misspecification leads to garbage results)
+
 
 
 
