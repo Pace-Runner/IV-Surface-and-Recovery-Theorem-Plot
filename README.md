@@ -37,7 +37,7 @@ What you're seeing is the famous "volatility smile". Out-of-the-money options ha
 If you would like a futher explination I would suggest watching this video:  
 https://www.youtube.com/watch?v=G7gf-oXptxE  
 https://www.youtube.com/watch?v=YH0tWpBaKGs
-Here is a video of me going through the program and explaining with very simply example of how one might inteperate the plots:
+Here is a video of me going through the program and explaining with very simply example of how one might inteperate the plots:  
 https://youtu.be/DxrStSYuIiY
 
 **What to look for:**
@@ -143,6 +143,7 @@ Lots of people think it's overly theoretical and the assumptions don't hold in r
 **Critiques:**
 - Borovička, J., Hansen, L. P., & Scheinkman, J. A. (2016). "Misspecified Recovery." *Journal of Finance*, 71(6), 2493-2544.
   - (They argue the assumptions are too strong and misspecification leads to garbage results)
+
 
 
 
