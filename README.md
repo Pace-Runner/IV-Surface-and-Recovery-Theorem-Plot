@@ -18,7 +18,7 @@ This is a Streamlit app that:
 4. Applies the Recovery Theorem to convert those risk-neutral probabilities into *physical* probabilities
 
 Here is a video of me going through the program and explaining with very simply example of how one might inteperate the plots:    
-https://youtu.be/DxrStSYuIiY
+[https://youtu.be/DxrStSYuIiY](https://youtu.be/1WfsKK7hEyA)
 
 ## Installation
 
@@ -144,6 +144,7 @@ Lots of people think it's overly theoretical and the assumptions don't hold in r
 **Critiques:**
 - Borovička, J., Hansen, L. P., & Scheinkman, J. A. (2016). "Misspecified Recovery." *Journal of Finance*, 71(6), 2493-2544.
   - (They argue the assumptions are too strong and misspecification leads to garbage results)
+
 
 
 
