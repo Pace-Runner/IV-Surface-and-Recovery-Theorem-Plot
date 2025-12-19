@@ -16,7 +16,6 @@ This is a Streamlit app that:
 2. Builds an implied volatility surface from that data
 3. Computes the risk-neutral probability distribution using Breeden-Litzenberger (the classic method from 1978)
 4. Applies the Recovery Theorem to convert those risk-neutral probabilities into *physical* probabilities
-5. 
 ## Installation
 
 ```bash
@@ -143,6 +142,7 @@ Lots of people think it's overly theoretical and the assumptions don't hold in r
 **Critiques:**
 - Borovička, J., Hansen, L. P., & Scheinkman, J. A. (2016). "Misspecified Recovery." *Journal of Finance*, 71(6), 2493-2544.
   - (They argue the assumptions are too strong and misspecification leads to garbage results)
+
 
 
 
