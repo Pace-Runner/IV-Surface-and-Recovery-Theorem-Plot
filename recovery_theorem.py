@@ -598,67 +598,7 @@ if 'df' in st.session_state:
         st.plotly_chart(fig_iv, use_container_width=True)
         st.info(f"**Surface Stats:** Min IV: {iv_mesh.min():.1%} | Max IV: {iv_mesh.max():.1%} | Mean: {iv_mesh.mean():.1%}")
     
-    # 2. RISK-NEUTRAL PDF
-    st.markdown("---")
-    st.subheader("📊 Risk-Neutral Probability Distribution")
-    
-    # Get available expiries for user selection
-    exp_options = sorted(df['days_to_expiry'].unique())[:10]
-    if exp_options:
-        # Slider to choose expiration date
-        selected_expiry = st.select_slider("Select Expiry (days)", options=exp_options, value=exp_options[min(3, len(exp_options)-1)])
-        
-        with st.spinner("Computing risk-neutral PDF..."):
-            strikes_rn, pdf_rn = compute_enhanced_risk_neutral_pdf(
-                df, spot_price, asset_info, selected_expiry, iv_smoothing
-            )
-        
-        if strikes_rn is not None:
-            # Plot the probability density function
-            fig_pdf = go.Figure()
-            fig_pdf.add_trace(go.Scatter(
-                x=strikes_rn,
-                y=pdf_rn,
-                mode='lines',
-                fill='tozeroy',  # Fill area under curve
-                name='Risk-Neutral PDF',
-                line=dict(color='cyan', width=3)
-            ))
-            
-            # Mark current spot price
-            fig_pdf.add_vline(x=spot_price, line_dash="dash", 
-                             line_color="red", 
-                             annotation_text=f"Current: ${spot_price:.2f}")
-            
-            # Calculate and mark expected future price under risk-neutral measure
-            expected_price = np.trapz(strikes_rn * pdf_rn, strikes_rn)
-            fig_pdf.add_vline(x=expected_price, line_dash="dot",
-                             line_color="yellow",
-                             annotation_text=f"Expected: ${expected_price:.2f}")
-            
-            fig_pdf.update_layout(
-                title=f'Risk-Neutral PDF - {selected_expiry} Days | {asset_name}',
-                xaxis_title='Strike Price ($)',
-                yaxis_title='Probability Density',
-                template='plotly_dark',
-                height=500
-            )
-            
-            st.plotly_chart(fig_pdf, use_container_width=True)
-            
-            # Calculate probability of up vs down moves by integrating PDF
-            prob_up = np.trapz(pdf_rn[strikes_rn > spot_price], strikes_rn[strikes_rn > spot_price])
-            prob_down = np.trapz(pdf_rn[strikes_rn < spot_price], strikes_rn[strikes_rn < spot_price])
-            
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                st.metric("Prob(Up)", f"{prob_up:.1%}")
-            with col2:
-                st.metric("Prob(Down)", f"{prob_down:.1%}")
-            with col3:
-                st.metric("Expected Return", f"{((expected_price/spot_price - 1) * 100):.2f}%")
-    
-    # 3. RECOVERY THEOREM
+    # 2. RECOVERY THEOREM
     st.markdown("---")
     st.subheader("🎯 Physical Probability Surface (Recovery Theorem)")
     st.markdown(f"*Real-world probabilities for {asset_name}*")
