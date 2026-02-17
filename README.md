@@ -1,6 +1,6 @@
 
 The prices of options you see aren't based on what people actually think will happen to a stock. They're based on what a hypothetical risk neutral investor would pay. That's useful for pricing options, but it doesn't tell you what's going to happen in the real world.
-In 2015, Stephen Ross published a theorey: he showed that under certain conditions, you can actually extract real-world probabilities from option prices. Not risk-neutral probabilities.
+In 2015, Stephen Ross published a theory: he showed that under certain conditions, you can actually extract real-world probabilities from option prices. Not risk-neutral probabilities.
 
 This project implements that theorem and visualizes it in 3D.
 
@@ -142,6 +142,7 @@ Lots of people think it's overly theoretical and the assumptions don't hold in r
 **Critiques:**
 - Borovička, J., Hansen, L. P., & Scheinkman, J. A. (2016). "Misspecified Recovery." *Journal of Finance*, 71(6), 2493-2544.
   - (They argue the assumptions are too strong and misspecification leads to garbage results)
+
 
 
 
