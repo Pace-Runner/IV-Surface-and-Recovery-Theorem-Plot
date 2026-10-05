@@ -37,7 +37,7 @@ If you would like a futher explination I would suggest watching this video:
 https://www.youtube.com/watch?v=G7gf-oXptxE  
 https://www.youtube.com/watch?v=YH0tWpBaKGs  
 Here is a video of me going through the program and explaining with very simply example of how one might inteperate the plots:  
-https://youtu.be/DxrStSYuIiY
+[https://youtu.be/DxrStSYuIiY](https://youtu.be/1WfsKK7hEyA?si=2z4ZXNMxpsyXXZmn)
 
 **What to look for:**
 - The smile gets more pronounced further from the current price
